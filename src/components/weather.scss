@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: app_block 3s;
   h1 {
     font-size: 47px;
     text-align: center;
@@ -22,6 +23,7 @@
         border-radius:50px;
         padding-left: 15px;
         border: 2px solid #727272;
+        animation: input_animate 3s;
       }
     input:focus-visible {
         outline: none;
@@ -51,19 +53,20 @@
     flex-direction: column;
     align-items: center;
     background-color: transparent;
-
     h3 {
       font-size: 45px;
       font-weight: 600;
       margin-top: -20px;
       position: relative;
       top: 20px;
+      animation: h3_animate 5s;
     }
     h4 {
       font-size: 30px;
       font-weight: 500;
       position: relative;
       top: 20px;
+      animation: h3_animate 10s;
     }
     .bottom_div {
       border: 2px solid #727272;
@@ -75,7 +78,7 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      
+      animation: bottom_animate 7s;
       
       div {
         width: 180px;
@@ -113,4 +116,54 @@
     .h1_weather {
       color: transparent;
   }}
+}
+
+@keyframes app_block {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+
+@keyframes input_animate {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 310px;
+    }
+}
+
+@keyframes h3_animate {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes h4_animate {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes bottom_animate {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

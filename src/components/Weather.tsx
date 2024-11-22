@@ -88,6 +88,7 @@ const Weather = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         fetchData();
+        setCity('')
     };
 
     const getWindDirection = (degree: number): string => {
@@ -114,21 +115,21 @@ const Weather = () => {
                         <div >
                             <img src="images/humdity.svg" alt="" />
                             <div>
-                                <h5 className='mr-6 mt-1'>{weatherData.humidity}%</h5>
+                                <h5 className='mr-6 mt-2'>{weatherData.humidity}%</h5>
                                 <h5 className='mr-9'>Humdity</h5>
                             </div>
                         </div>
                         <div>
                             <img src="images/wind.svg" alt="" />
                             <div>
-                                <h5 className='ml-5 mt-1'>{weatherData.wind.speed}km/h</h5>
+                                <h5 className='ml-5 mt-1.5'>{weatherData.wind.speed}km/h</h5>
                                 <h5 className='mr-16'>Wind</h5>
                             </div>
                         </div>
                         <div >
                             <img src="images/UV_index.svg" alt="" />
                             <div>
-                                <h5 className='mr-12 mt-0.5'>{weatherData.uvIndex}</h5>
+                                <h5 className='mr-12 mt-1'>{weatherData.uvIndex}</h5>
                                 <h5 className='mr-8'>UV Index</h5>
                             </div>
                         </div>
