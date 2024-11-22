@@ -1,6 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
-import './index.scss';
+import './index.scss'
 import Weather from './components/Weather';
 
 function App() {
