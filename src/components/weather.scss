@@ -52,11 +52,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
     background-color: transparent;
+    img {
+      position: relative;
+      top: 20px;
+    }
     h3 {
       font-size: 45px;
       font-weight: 600;
-      margin-top: -20px;
+      margin-top: -10px;
       position: relative;
       top: 20px;
       animation: h3_animate 5s;
@@ -135,35 +140,4 @@
     to {
       width: 310px;
     }
-}
-
-@keyframes h3_animate {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes h4_animate {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes bottom_animate {
-  from {
-    transform: scale(0);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
